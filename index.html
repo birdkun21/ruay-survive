@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rumruay Survivor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-shell">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="hud">
+      <div class="topbar">
+        <div class="panel">
+          <div class="label">HP</div>
+          <div class="bar hp"><div id="hpFill"></div></div>
+          <div id="hpText">100 / 100</div>
+        </div>
+        <div class="panel wide">
+          <div class="label">EXP Lv.<span id="levelText">1</span></div>
+          <div class="bar exp"><div id="expFill"></div></div>
+        </div>
+        <div class="panel">
+          <div class="label">เวลา</div>
+          <div id="timeText">00:00 / 10:00</div>
+        </div>
+      </div>
+      <div class="leftstack">
+        <div class="panel small"><div class="label">ศัตรูที่กำลังอยู่ในฉาก</div><div id="enemyCount">0</div></div>
+        <div class="panel small"><div class="label">อาวุธ</div><div id="weaponList"></div></div>
+      </div>
+      <div class="bottomtips panel">
+        WASD / ลูกศร เคลื่อนที่ · เกมยิงอัตโนมัติ · กด P หยุดชั่วคราว · กด T ข้ามเวลา +30 วินาทีเพื่อเทส
+      </div>
+    </div>
+
+    <div id="overlay" class="show">
+      <div class="modal">
+        <h1>Rumruay Survivor</h1>
+        <p>เอาตัวรอด 10 นาที เก็บ EXP อัปเลเวล ปลดล็อกอาวุธใหม่ และปราบบอสแมวดำนาทีที่ 5 กับ 10 ให้ได้</p>
+        <button id="startBtn">เริ่มเกม</button>
+      </div>
+    </div>
+
+    <div id="levelup" class="hidden">
+      <div class="modal">
+        <h2>Level Up!</h2>
+        <p>เลือกอัปเกรด 1 อย่าง</p>
+        <div id="choices" class="choices"></div>
+      </div>
+    </div>
+  </div>
+
+    <div id="touchControls" class="touch-controls hidden">
+      <div id="joystickBase" class="joystick-base">
+        <div id="joystickKnob" class="joystick-knob"></div>
+      </div>
+      <div class="touch-hint">ลากวงกลมซ้ายล่างเพื่อเดิน</div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
